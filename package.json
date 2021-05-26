@@ -1,0 +1,24 @@
+{
+  "name": "demo-2",
+  "version": "0.0.0",
+  "main": "dist/my-element.es.js",
+  "exports": {
+    ".": "./dist/my-element.es.js"
+  },
+  "types": "types/my-element.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "lit": "2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "vite": "^2.3.4",
+    "typescript": "^4.1.3"
+  }
+}

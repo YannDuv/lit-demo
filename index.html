@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💡 Lit demo</title>
+    <link href="/style.css" rel="stylesheet" />
+    <script type="module" src="/src/my-comment.ts"></script>
+    <script type="module" src="/src/my-rate.ts"></script>
+  </head>
+  <body>
+    <h1>Comment a été la présentation</h1>
+    <form method="POST" action="/comments">
+      <my-rate></my-rate>
+      <my-comment></my-comment>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
