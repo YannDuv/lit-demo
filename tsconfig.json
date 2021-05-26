@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "ES6",
     "module": "esnext",
     "lib": ["es2017", "dom", "dom.iterable"],
     "declaration": true,
@@ -14,7 +15,8 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true
   },
   "include": ["src/**/*.ts"],
   "exclude": []

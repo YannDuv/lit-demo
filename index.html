@@ -9,11 +9,52 @@
     <script type="module" src="/src/my-rate.ts"></script>
   </head>
   <body>
-    <h1>Comment a été la présentation</h1>
-    <form method="POST" action="/comments">
+    <h1>Comment a été la présentation ?</h1>
+    <form>
       <my-rate></my-rate>
-      <my-comment></my-comment>
+      <my-comment
+        label="Description"
+        name="description"
+        onchange="update"
+      ></my-comment>
       <button type="submit">Submit</button>
+
+      <pre></pre>
     </form>
   </body>
+  <script type="module">
+    let description
+    let rate
+
+    // FORM
+    document.querySelector("form").addEventListener("submit", (event) => {
+      event.preventDefault()
+      console.info("submit", {
+        description,
+        rate,
+      })
+    })
+
+    function updateDataPrompt() {
+      document.querySelector("pre").textContent = JSON.stringify(
+        { description, rate },
+        undefined,
+        2
+      )
+    }
+
+    // Description
+    document
+      .querySelector("my-comment")
+      .addEventListener("onchange", (event) => {
+        description = event.target.value
+        updateDataPrompt()
+      })
+
+    // Rate
+    document.querySelector("my-rate").addEventListener("onchange", (event) => {
+      rate = event.target.value
+      updateDataPrompt()
+    })
+  </script>
 </html>
